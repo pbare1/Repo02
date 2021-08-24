@@ -1,0 +1,133 @@
+{
+  "id": "271b4c60-7428-4d38-a47e-0c86d6fe546c",
+  "version": "2.0",
+  "name": "NewSelProj",
+  "url": "http://the-internet.herokuapp.com",
+  "tests": [{
+    "id": "0059910d-3091-4732-a8b1-51012d2394b7",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "e7d370e6-66c5-4f18-88f4-26b6341186fd",
+    "name": "SelTest01",
+    "commands": [{
+      "id": "f4cb5a5c-8f9f-4b36-b6dd-e4249e9dd189",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6d76951-321a-4d2e-a35d-ccd48510ccdd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1483x990",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6609bcfd-5f76-442f-92ea-de3e862b223b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=File Download",
+      "targets": [
+        ["linkText=File Download", "linkText"],
+        ["css=li:nth-child(17) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'File Download')]", "xpath:link"],
+        ["xpath=//div[@id='content']/ul/li[17]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/download')]", "xpath:href"],
+        ["xpath=//li[17]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'File Download')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c417a40-d85f-4e83-8d6b-8ffb0650b31e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=testy.csv",
+      "targets": [
+        ["linkText=testy.csv", "linkText"],
+        ["css=a:nth-child(12)", "css:finder"],
+        ["xpath=//a[contains(text(),'testy.csv')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/a[6]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'download/testy.csv')]", "xpath:href"],
+        ["xpath=//a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'testy.csv')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d771af79-c683-421a-a5a3-c1421cca6651",
+    "name": "SelTest02",
+    "commands": [{
+      "id": "2d410d25-5d64-48cd-affb-47903dba7fac",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8eb4c1cd-1fca-4c7c-b80c-a1e9fd0a58a9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1483x990",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f25d7c6-acaf-4b1e-8245-ae7e085c688b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Drag and Drop",
+      "targets": [
+        ["linkText=Drag and Drop", "linkText"],
+        ["css=li:nth-child(10) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Drag and Drop')]", "xpath:link"],
+        ["xpath=//div[@id='content']/ul/li[10]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/drag_and_drop')]", "xpath:href"],
+        ["xpath=//li[10]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Drag and Drop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b2b9b56-75cd-4a9e-b068-d54f53e95186",
+      "comment": "",
+      "command": "dragAndDropToObject",
+      "target": "id=column-b",
+      "targets": [],
+      "value": "id=column-a"
+    }, {
+      "id": "3c7e3a6d-6025-4dbf-a0e3-42a1ff578a64",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d42a04f-c0ef-4212-b033-c6463e800ad7",
+      "comment": "",
+      "command": "dragAndDropToObject",
+      "target": "id=column-a",
+      "targets": [],
+      "value": "id=column-b"
+    }]
+  }],
+  "suites": [{
+    "id": "19861b6e-f2b9-4d0b-a521-ef5d4b225501",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0059910d-3091-4732-a8b1-51012d2394b7"]
+  }, {
+    "id": "f04edbc9-82e9-4297-b332-b6cf343d4ce7",
+    "name": "NewSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e7d370e6-66c5-4f18-88f4-26b6341186fd", "d771af79-c683-421a-a5a3-c1421cca6651"]
+  }],
+  "urls": ["http://the-internet.herokuapp.com/"],
+  "plugins": []
+}
